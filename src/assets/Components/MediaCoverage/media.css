@@ -1,0 +1,155 @@
+/* Updated CSS for side-by-side video and description */
+.media-page {
+  background: linear-gradient(180deg, #f0f9ff 0%, #e6f7ed 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid #d1fae5;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #065f46;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.media-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.media-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #065f46;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.header-accent {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #34d399, #22d3ee);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Updated video card layout */
+.video-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-card {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper {
+  flex: 1;
+  min-width: 50%;
+  position: relative;
+  padding-bottom: 28.125%; /* Half of 56.25% for 16:9 aspect ratio */
+  background: #f3f4f6;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-info {
+  flex: 1;
+  padding: 1.5rem;
+  min-width: 50%;
+}
+
+.video-info h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #065f46;
+  margin-bottom: 0.5rem;
+}
+
+.video-date {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.video-description {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.watch-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #34d399, #22d3ee);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .video-card {
+    flex-direction: column;
+  }
+  
+  .video-wrapper {
+    padding-bottom: 56.25%; /* Full height on mobile */
+  }
+  
+  .media-header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .media-page {
+    padding: 1.5rem;
+  }
+  
+  .media-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .video-info {
+    padding: 1rem;
+  }
+}
