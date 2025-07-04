@@ -1,0 +1,25 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #F8F9FA; 
+  font-family: 'Poppins', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+.container{
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+.slick-list, .slick-slider, .slick-track{
+  padding:3rem 0;
+}
